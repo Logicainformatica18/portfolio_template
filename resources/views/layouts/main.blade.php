@@ -19,11 +19,12 @@
     <!--=== main css ===-->
     <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}" />
-    <title>El Rincon de Isma </title>
+    <title>Anthony Code </title>
 
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia(
+                "(prefers-color-scheme: dark)").matches)) {
             document.documentElement.classList.add("dark");
         } else {
             document.documentElement.classList.remove("dark");
@@ -43,7 +44,7 @@
         <div class="section-bg">
             <div class="w-full flex justify-between px-4">
                 <!-- website Logo -->
-                
+
                 <div class="flex items-center">
                     <!-- dark and light mode toggle -->
                     <button id="theme-toggle" type="button" class="dark-light-btn">
@@ -81,12 +82,12 @@
                             <i class="fas fa-briefcase"></i>
                         </span>Trabajos </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a class="mobile-menu-items" href="./blogOne.html">
                         <span class="mr-2 text-xl">
                             <i class="fa-brands fa-blogger"></i>
                         </span>Blogs </a>
-                </li>
+                </li> --}}
                 <li>
                     <a class="mobile-menu-items" href="./contactOne.html">
                         <span class="mr-2 text-xl">
@@ -103,37 +104,52 @@
                 <div
                     class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
                     <!-- profile image -->
-                    <img src="{{asset('images/LOGO.jpg')}}"
-                        class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
+                    <img src="{{ asset('images/LOGO.jpg') }}"
+                        class="w-[140px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
                         alt="about" />
                     <div class="pt-[100px] pb-8">
-                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Ismael Catalá </h2>
+                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white">Anthony Code </h2>
                         <h3
                             class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
-                            Software developer </h3>
+                            Teacher & Web Developer </h3>
                         <div class="flex justify-center space-x-3">
-                            <!-- facebook icon and link -->
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                                <span class="socialbtn text-[#1773EA]">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </span>
-                            </a>
+
                             <!-- twitter icon and link -->
-                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                            {{-- <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#1C9CEA]">
                                     <i class="fa-brands fa-twitter"></i>
                                 </span>
-                            </a>
+                            </a> --}}
                             <!-- dribbble icon and link -->
-                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                            {{-- <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#e14a84]">
                                     <i class="fa-brands fa-dribbble"></i>
                                 </span>
-                            </a>
+                            </a> --}}
                             <!-- linkedin icon and link -->
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/anthony-cardenas-aquino-01a645141/" target="_blank"
+                                rel="noopener noreferrer">
                                 <span class="socialbtn text-[#0072b1]">
                                     <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UC13FlAy_27IpJfowhoo73Gg" target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </span>
+                            </a>
+                            <a href="https://github.com/Logicainformatica18" target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-github"></i>
+                                </span>
+                            </a>
+                            <!-- facebook icon and link -->
+                            <a href="https://www.facebook.com/Logicainformatica2020" target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
                                 </span>
                             </a>
                         </div>
@@ -145,16 +161,11 @@
                                 </span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Teléfono </p>
-                                    <p class="dark:text-white">+123 456 7890</p>
-                                </div>
-                            </div>
-                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
-                                <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
-                                    <i class="fa-solid fa-envelope-open-text"></i>
-                                </span>
-                                <div class="text-left ml-2.5">
-                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
-                                    <p class="dark:text-white">example@mail.com</p>
+                                    <p class="dark:text-white">
+                                        <a href="https://api.whatsapp.com/send?phone=+51986547813&text=Deseo%20alg%C3%BAn%20servicio"
+                                        target="_blank"
+                                        >+51 986 547 813</a>
+                                        </p>
                                 </div>
                             </div>
                             <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
@@ -163,10 +174,20 @@
                                 </span>
                                 <div class="text-left ml-2.5">
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Dirección </p>
-                                    <p class="dark:text-white">Madrid, España</p>
+                                    <p class="dark:text-white">Lima, Perú</p>
                                 </div>
                             </div>
-                            <div class="flex py-2.5">
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
+                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
+                                    <p class="dark:text-white">logicainformatica18@gmail.com</p>
+                                </div>
+                            </div>
+                          
+                            {{-- <div class="flex py-2.5">
                                 <span class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md">
                                     <i class="fa-solid fa-calendar-days"></i>
                                 </span>
@@ -174,12 +195,13 @@
                                     <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Año de nacimiento </p>
                                     <p class="dark:text-white">24 Sept, 1987</p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- personal infomation end-->
                         <!-- dowanload button -->
-                        <button class="dowanload-btn">
-                            <img class="mr-3" src="{{asset('images/icons/dowanload.png')}}" alt="icon" /> Descargar CV </button>
+                        {{-- <button class="dowanload-btn">
+                            <img class="mr-3" src="{{ asset('images/icons/dowanload.png') }}" alt="icon" />
+                            Descargar CV </button> --}}
                     </div>
                 </div>
             </div>
@@ -189,23 +211,28 @@
                     class="lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
                     <nav class="hidden lg:block">
                         <ul class="flex">
-                            <li> <a @if(Route::is('home')) class="menu-active" @else class="menu-item" @endif href="/">
+                            <li> <a @if (Route::is('home')) class="menu-active" @else class="menu-item" @endif
+                                    href="/">
                                     <span class="text-xl mb-1">
                                         <i class="fa-regular fa-user"></i>
                                     </span> Sobre mi </a></li>
-                            <li> <a @if(Route::is('resume')) class="menu-active" @else class="menu-item" @endif href="{{ route('resume') }}">
+                            <li> <a @if (Route::is('resume')) class="menu-active" @else class="menu-item" @endif
+                                    href="{{ route('resume') }}">
                                     <span class="text-xl mb-1">
                                         <i class="fa-regular fa-file-lines"></i>
                                     </span> Resumen </a></li>
-                            <li> <a @if(Route::is('jobs')) class="menu-active" @else class="menu-item" @endif href="{{ route('jobs') }}">
+                            <li> <a @if (Route::is('jobs')) class="menu-active" @else class="menu-item" @endif
+                                    href="{{ route('jobs') }}">
                                     <span class="text-xl mb-1">
                                         <i class="fas fa-briefcase"></i>
                                     </span> Trabajos </a></li>
-                            <li><a @if(Route::is('blog')) class="menu-active" @else class="menu-item" @endif href="{{ route('blog') }}">
+                            <li><a @if (Route::is('blog')) class="menu-active" @else class="menu-item" @endif
+                                    href="{{ route('blog') }}">
                                     <span class="text-xl mb-1">
                                         <i class="fa-brands fa-blogger"></i>
                                     </span> Blogs </a></li>
-                            <li> <a @if(Route::is('contact')) class="menu-active" @else class="menu-item" @endif href="{{ route('contact') }}">
+                            <li> <a @if (Route::is('contact')) class="menu-active" @else class="menu-item" @endif
+                                    href="{{ route('contact') }}">
                                     <span class="text-xl mb-1">
                                         <i class="fa-solid fa-address-book"></i>
                                     </span> Contacto </a></li>
@@ -214,7 +241,7 @@
                 </header>
                 <!-- header for mobile devices end -->
                 @yield('content')
-                
+
             </div>
         </div>
     </div>
@@ -230,7 +257,7 @@
     <script src="{{ asset('js/jquery.modal.min.js') }}"></script>
     <!-- main js -->
     <script src="{{ asset('js/main.js') }}"></script>
-    
+
 </body>
 
 </html>
